@@ -45,9 +45,9 @@ export function HeaderLinks() {
     <header className="py-5 xr:hidden md:flex">
       <div className="container flex items-center justify-between">
         <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-black text-sm font-medium uppercase">Home</NavigationMenuTrigger>
+          <NavigationMenuList className="bg-transparent">
+            <NavigationMenuItem className="bg-transparent">
+              <NavigationMenuTrigger className="bg-transparent text-black text-sm font-medium uppercase">Home</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                   <li className="row-span-3">
@@ -80,7 +80,7 @@ export function HeaderLinks() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-black text-sm font-medium uppercase">Shop</NavigationMenuTrigger>
+              <NavigationMenuTrigger className=" bg-transparent text-black text-sm font-medium uppercase">Shop</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                   {components.map((component) => (
@@ -94,7 +94,7 @@ export function HeaderLinks() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-black text-sm font-medium uppercase">Blog</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-black text-sm font-medium uppercase bg-transparent">Blog</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                   {components.map((component) => (
@@ -108,7 +108,7 @@ export function HeaderLinks() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-black text-sm font-medium uppercase">Portfolio</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-black text-sm font-medium uppercase bg-transparent">Portfolio</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                   {components.map((component) => (
@@ -122,7 +122,7 @@ export function HeaderLinks() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-black text-sm font-medium uppercase">Page</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-black text-sm font-medium uppercase bg-transparent">Page</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                   {components.map((component) => (
@@ -137,13 +137,13 @@ export function HeaderLinks() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="" legacyBehavior passHref>
-                <NavigationMenuLink className="text-black text-sm font-medium uppercase">
+                <NavigationMenuLink className="text-black text-sm font-medium uppercase bg-transparent">
                   CONTACT
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-black text-sm font-medium uppercase">Your Recently Viewed </NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-black text-sm font-medium uppercase bg-transparent">Your Recently Viewed </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="flex items-center w-[1350px]">
                   {components.map((component) => (
@@ -160,8 +160,8 @@ export function HeaderLinks() {
         </NavigationMenu>
         <div className="flex items-center gap-5">
           <Select>
-            <SelectTrigger className="w-[110px] flex items-center gap-2">
-              <SelectValue className='text-dark text-sm font-normal' placeholder="US Dollar" />
+            <SelectTrigger className="w-[110px] flex items-center gap-2 bg-transparent">
+              <SelectValue className='text-dark text-sm font-normal bg-transparent' placeholder="US Dollar" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup className='outline-none'>
@@ -172,7 +172,7 @@ export function HeaderLinks() {
           </Select>
           <div className="border h-[20px] border-whitegray"></div>
           <Select>
-            <SelectTrigger className="w-[100px] flex items-center">
+            <SelectTrigger className="w-[100px] flex items-center bg-transparent">
               <SelectValue className='text-dark text-sm font-normal' placeholder="English " />
             </SelectTrigger>
             <SelectContent>

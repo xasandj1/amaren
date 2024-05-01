@@ -32,6 +32,7 @@ const config = {
         yellow: "#FCB700",
         gray: "#666666",
         whitegray: "#EBEBEB",
+        darkblack: "#222",
         dark: "#333E48",
         black: "#333",
         border: "hsl(var(--border))",
