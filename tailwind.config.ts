@@ -10,31 +10,27 @@ const config = {
   ],
   prefix: "",
   theme: {
-
+    screens: {
+      xs: "360px",
+      sm: "576px",
+      md: "768px",
+      ml: "992px",
+      lg: "1024px",
+      lg2: "1140px",
+      xl: "1280px",
+      "2xl": "1400px",
+      "3xl": "1600px",
+      "4xl": "1920px",
+    },
     extend: {
-      screens: {
-        xr: "300px",
-        sx: "321px",
-        xs: "376px",
-        sm: "426px",
-        md: "769px",
-        lg: "1025px",
-        xl: "1440px",
-      },
       container: {
         center: true,
         padding: "20px",
         screens: {
-          "lg": "1400px",
+          xl: "1440px",
         },
       },
       colors: {
-        yellow: "#FCB700",
-        gray: "#666666",
-        whitegray: "#EBEBEB",
-        darkblack: "#222",
-        dark: "#333E48",
-        black: "#333",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -88,9 +84,12 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      boxShadow: {
+        navigation: "rgba(0,0,0,0.75) - 3px - 10px 14px - 3px rgba(0,0,0,0.75) - 3px - 10px 14px - 3px rgba(0,0,0,0.75)",
+      }
     },
   },
-  plugins: [require("tailwindcss-animate")],
+plugins: [require("tailwindcss-animate")],
 } satisfies Config
 
 export default config

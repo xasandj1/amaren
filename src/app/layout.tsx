@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { cn } from "@/lib/utils"
+import { Header } from "./components/header/header";
+import { Footer } from "./components/footer/footer";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ScrollDownButton } from "@radix-ui/react-select";
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
-
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,15 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(
-        "min-h-screen bg-background font-sans antialiased",
-        fontSans.variable
-      )}>
-        <div className="">
-          <Header />
-        </div>
-        {children}
-        <Footer />
+      <body className={inter.className}>
+        {/* <ScrollDownButton/> */}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <div className="h-screen flex flex-col justify-between">
+            <div>
+              <Header />
+              <main>
+                {children}
+              </main>
+            </div>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
