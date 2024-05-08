@@ -10,6 +10,8 @@ import { getSubcategories } from "./service/getSubcategories";
 import { BannerCard } from "./components/slides/banner-card/banner-card";
 import { SideMenu } from "./components/sidemenu/sidemenu";
 import { ProductCarousel } from "./components/slides/product-carousel/product-carousel";
+import { RecentProduct } from "./components/slides/recent-product/recent-product";
+import RatingStars from "@/components/ui/RetingStar";
 
 
 const Home = async () => {
@@ -63,14 +65,14 @@ const Home = async () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#F5F6F9] dark:bg-[#202020e4] py-6">
-        <div className="container">
-
-        </div>
-      </section>
       <section className="bg-[#F5F6F9] dark:bg-[#202020e4] pt-4 pb-10 " >
-        <div className="container flex items-center">
-          <ProductCarousel />
+        <div className="container flex items-center gap-5">
+          <div className="">
+            <ProductCarousel />
+          </div>
+          <div className="">
+            <RecentProduct />
+          </div>
         </div>
       </section>
     </>
