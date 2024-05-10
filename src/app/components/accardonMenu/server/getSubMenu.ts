@@ -1,9 +1,13 @@
 "use server";
+
 interface Category {
     id: number;
     title: string;
     image: string;
-    children: Category[];
+    parent: {
+        id: number;
+        title: string;
+    };
 }
 
 interface CategoryResponse {
@@ -13,9 +17,9 @@ interface CategoryResponse {
     results: Category[];
 }
 
-export const getCategories = async (): Promise<CategoryResponse> => {
+export const getSubMenu = async (): Promise<CategoryResponse> => {
     try {
-        const response = await fetch('http://135.181.108.207/category/', {
+        const response = await fetch('http://135.181.108.207/api/subcategory/', {
             next: { revalidate: 300 },
         });
         const data = await response.json();

@@ -17,8 +17,8 @@ export const RecentProduct = async () => {
             <Carousel>
                 <div className="relative flex items-center">
                     <div className="flex items-baseline gap-2">
-                        <p className="font-bold text-3xl text-[#222]">Top Flash</p>
-                        <p className="font-light text-2xl text-[#222]">Deals</p>
+                        <p className="font-bold text-3xl text-[#222]">Recent</p>
+                        <p className="font-light text-2xl text-[#222]">Products</p>
                     </div>
                     <div className="flex items-center">
                         <CarouselPrevious className='left-[80%] top-[64%]' />
@@ -29,12 +29,12 @@ export const RecentProduct = async () => {
                     {Array.from({ length: 5 }).map((_, index) => (
                         <>
                             {products.results.map((product: Product) => (
-                                <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3 ">
+                                <CarouselItem key={index} className="pl-1 md:basis-1/3 lg:basis-1/3 sm:basis-1/3 ">
                                     <div key={product.id} className="">
                                         <CardContent className=" flex w-[235px] items-center">
                                             <div className="bg-white flex flex-col items-center p-3 h-[360px]">
-                                                <img src={product.image} alt="" className="w-full h-[200px] object-cover" />
-                                                <h3 className="text-[#999] text-sm font-normal">{product.title}</h3>
+                                                <img src={product.image} alt="" className="w-full h-[150px] object-cover" />
+                                                <h3 className="text-[#999] text-xs font-normal text-center">{product.title}</h3>
                                                 <p className="text-center text-[#0066C0] text-sm mt-1 mb-2">Recliner syntheti deck chair</p>
                                                 <RatingStars rating={1}/>
                                                 <p className="text-[#0066C0] text-sm font-bold mt-3">${product.price}</p>

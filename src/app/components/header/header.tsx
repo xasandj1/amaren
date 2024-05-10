@@ -66,12 +66,12 @@ export const Header = () => {
                                 <Image className='max-sm:w-[130px]' src={logo} alt="logo" />
                             </Link>
                         </div>
-                        <a href="tel:+998332000607" className='hidden gap-2 items-center xs:hidden sm:hidden md:hidden ml:hidden lg:hidden lg2:flex'>
+                        <a href="tel:+998880330070" className='hidden gap-2 items-center xs:hidden sm:hidden md:hidden ml:hidden lg:hidden lg2:flex'>
                             <BiSupport size={44} />
                             <div className='flex flex-col items-start justify-start'>
                                 <p className='text-[14px] text-[#6666] dark:text-[#ffffffd7]'>Hotline Free:</p>
                                 <p className='text-[14px] text-[#333] dark:text-[#ffffffd3]' >
-                                    +998-33-200-06-07
+                                    +998-88-033-00-70
                                 </p>
                             </div>
                         </a>

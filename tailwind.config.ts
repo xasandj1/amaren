@@ -18,9 +18,7 @@ const config = {
       lg: "1024px",
       lg2: "1140px",
       xl: "1280px",
-      "2xl": "1400px",
-      "3xl": "1600px",
-      "4xl": "1920px",
+      xxl: "1440px"
     },
     extend: {
       container: {
@@ -31,6 +29,7 @@ const config = {
         },
       },
       colors: {
+        primaryYellow:"#FCB700",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -89,7 +88,7 @@ const config = {
       }
     },
   },
-plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config
 
 export default config

@@ -13,7 +13,7 @@ interface SubcategoryType {
 
 export const getSubcategories = async (): Promise<SubcategoryType> => {
     try {
-        const response = await fetch('http://135.181.108.207/api/subcategory/', {
+        const response = await fetch('http://135.181.108.207/api/subcategory/?limit=10', {
             next: { revalidate: 300 },
         });
         const data = await response.json();

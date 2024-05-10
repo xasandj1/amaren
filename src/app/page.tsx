@@ -4,17 +4,15 @@ import banner2 from "@/app/assets/images/banner2.jpg";
 import banner3 from "@/app/assets/images/banner3.jpg";
 import { ServiceItem } from "./components/service-item/service-item";
 import { serviceData } from "../data/service-data";
-import Image from "next/image";
 import { SubcategoryCard } from "./components/subcategory-card/subcategory-card";
 import { getSubcategories } from "./service/getSubcategories";
 import { BannerCard } from "./components/slides/banner-card/banner-card";
 import { SideMenu } from "./components/sidemenu/sidemenu";
 import { ProductCarousel } from "./components/slides/product-carousel/product-carousel";
 import { RecentProduct } from "./components/slides/recent-product/recent-product";
-import RatingStars from "@/components/ui/RetingStar";
 
 
-const Home = async () => {
+const Home = async ({ index }: { index: number }) => {
   const subcategories = await getSubcategories();
   return (
     <>
@@ -23,7 +21,7 @@ const Home = async () => {
           <div className=" w-full flex items-start justify-between gap-5 ">
             <SideMenu />
             <div className="w-full ml:min-w-[660px]">
-              <BannerCard />
+              <BannerCard key={index} />
             </div>
           </div>
         </div>
@@ -32,8 +30,8 @@ const Home = async () => {
         <div className="container">
           <div className="bg-white dark:bg-[#141414] rounded-md py-[30px] flex flex-col gap-10 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 px-[10px]">
             {
-              serviceData.map((service) => (
-                <ServiceItem key={service.id} title={service.title} description={service.description} icon={service.icon} />
+              serviceData.map((service, index) => (
+                <ServiceItem key={index} title={service.title} description={service.description} icon={service.icon} />
               ))
             }
           </div>
@@ -66,13 +64,9 @@ const Home = async () => {
         </div>
       </section>
       <section className="bg-[#F5F6F9] dark:bg-[#202020e4] pt-4 pb-10 " >
-        <div className="container flex items-center gap-5">
-          <div className="">
-            <ProductCarousel />
-          </div>
-          <div className="">
-            <RecentProduct />
-          </div>
+        <div className="container flex items-center gap-5 xxl:flex-row lg2:flex-col sm:flex-col xs:flex-col ">
+          <ProductCarousel />
+          <RecentProduct />
         </div>
       </section>
     </>

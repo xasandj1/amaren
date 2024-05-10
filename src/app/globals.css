@@ -40,7 +40,7 @@ body {
   bottom: 8%;
   font-size: 0;
   gap: 10px;
-  
+
 }
 
 .slick-dots li button {
@@ -51,7 +51,8 @@ body {
 }
 
 .slick-active button {
-  background-color: #ffffff !important; ;
+  background-color: #ffffff !important;
+  ;
 }
 
 .slick-next {
@@ -75,6 +76,7 @@ body {
   border-radius: 50%;
   display: inline-block;
 }
+
 .slick-prev::after {
   content: "";
   font-size: 50px;
@@ -107,4 +109,9 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #1677FF;
   border-radius: 10px;
+}
+
+.roundedborder {
+  border: 5px solid #FCB700;
+  background: white;
 }

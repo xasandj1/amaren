@@ -20,10 +20,9 @@ export interface ProductListType {
     results: ProductType[];
 }
 
-export const getProductsVariant = async (): Promise<ProductListType> => {
-    const baseUrl = process.env.NEXTAUTH_URL;
+export const getProductsVariantId = async (categoryId: number | null): Promise<ProductListType> => {
     try {
-        const response = await fetch(`http://135.181.108.207/product_variant/`, {
+        const response = await fetch(`http://135.181.108.207/product_variant/?product_category=${categoryId}`, {
             next: { revalidate: 200 },
         });
         const data = await response.json();
