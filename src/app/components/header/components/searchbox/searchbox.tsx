@@ -1,5 +1,3 @@
-// "use server"
-
 import React from 'react'
 import {
     Select,
@@ -11,11 +9,25 @@ import {
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { getCategories } from '@/app/service/getCategories'
+import SearchInput from '../search/searchInput'
 
+interface ProductListType {
+    id: number;
+    image: string;
+    title: string;
+    description: string;
+}
+
+interface ProductProps {
+    count: number;
+    next: number | null;
+    previous: number | null;
+    results: ProductListType[];
+}
 
 export const Searchbox = async () => {
     const categories = await getCategories();
-    
+
     return (
         <div className='flex items-center justify-center'>
             <Select>
@@ -28,7 +40,7 @@ export const Searchbox = async () => {
                     ))}
                 </SelectContent>
             </Select>
-            <Input className='border border-[#FCB700]' placeholder='Search Products...'/>
+            <SearchInput />
             <Button variant='outline' className='rounded-r-full bg-[#FCB700] border border-[#FCB700] border-l-0'>Search</Button>
         </div>
     )

@@ -29,7 +29,8 @@ const config = {
         },
       },
       colors: {
-        primaryYellow:"#FCB700",
+        primaryYellow: "#FCB700",
+        borderGray: "#ebebeb",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -39,7 +39,7 @@ export const HeaderMenubar = () => {
   }, []);
 
   return (
-    <div className={`border-t hidden ml:block border-t-[#e7e2e2] py-4 ${isSticky ? 'fixed top-0 w-full z-50 left-0 right-0 bg-white dark:bg-[#141414] shadow-lg' : ''}`}>
+    <div className={`border-t hidden ml:block border-t-[#e7e2e2] py-2 ${isSticky ? 'fixed top-0 w-full z-50 left-0 right-0 bg-white dark:bg-[#141414] shadow-lg' : ''}`}>
       <div className="container">
         <div className='flex items-center hid justify-end lg:justify-between'>
           <Menubar className='border-none hidden lg:flex shadow-none'>

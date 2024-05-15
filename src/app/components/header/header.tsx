@@ -1,4 +1,3 @@
-
 import Image from 'next/image'
 import React from 'react'
 import logo from '@/app/assets/images/logo.png'
@@ -9,7 +8,6 @@ import {
     DrawerTrigger,
 } from "@/components/ui/drawer"
 import { Button } from '@/components/ui/button'
-import { Searchbar } from './components/searchbar/searchbar';
 import {
     Accordion,
     AccordionContent,
@@ -111,9 +109,7 @@ export const Header = () => {
                                     <div className='pb-5 pl-4'>
                                         <ModeToggle />
                                     </div>
-                                    <div className='py-3 px-3 '>
-                                        <Searchbar />
-                                    </div>
+
                                     <div>
                                         <Accordion type="single" collapsible>
                                             <AccordionItem className='px-3' value="item-1">

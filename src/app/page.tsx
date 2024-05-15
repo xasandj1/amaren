@@ -10,6 +10,7 @@ import { BannerCard } from "./components/slides/banner-card/banner-card";
 import { SideMenu } from "./components/sidemenu/sidemenu";
 import { ProductCarousel } from "./components/slides/product-carousel/product-carousel";
 import { RecentProduct } from "./components/slides/recent-product/recent-product";
+import { CiDesktopMouse2 } from "react-icons/ci";
 
 
 const Home = async ({ index }: { index: number }) => {
@@ -69,6 +70,9 @@ const Home = async ({ index }: { index: number }) => {
           <RecentProduct />
         </div>
       </section>
+      <button className="fixed bg-primaryYellow p-5 rounded-[50%] right-[10px] bottom-[5px] z-50">
+        <CiDesktopMouse2 fontSize={20} fontWeight={700}/>
+      </button>
     </>
   );
 }

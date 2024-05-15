@@ -8,10 +8,10 @@ export const BannerCard = async () => {
         <div>
             <Banner>
                 {
-                    banners.results.map((banner,index) => (
+                    banners.results.map((banner, index) => (
                         <div key={index} className={`w-full`} >
                             <img src={banner.image} className="w-full min-h-[300px] xs:min-h-[300px] sm:h-[500px] ml:h-[600px] object-cover bg-center" alt="" />
-                            <div className="absolute w-full z-100 top-0 p-10" >
+                            <div className="absolute w-full z-100 top-0 ml:p-10 xs:p-0" >
                                 <h1 className="text-white text-[30px] ]" >{banner.title}</h1>
                                 <h2 className="w-[200px] text-white" dangerouslySetInnerHTML={{ __html: banner.description }}></h2>
                             </div>
