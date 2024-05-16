@@ -5,6 +5,9 @@ import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollDownButton } from "@radix-ui/react-select";
+import { Provider } from "react-redux";
+import { store } from "@/redux/Store";
+import { NextAuthStore } from "@/provider/next-auth-store";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,17 +25,19 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {/* <ScrollDownButton/> */}
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <div className="h-screen flex flex-col justify-between">
-            <div>
-              <Header />
-              <main>
-                {children}
-              </main>
+        <NextAuthStore>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+            <div className="h-screen flex flex-col justify-between">
+              <div>
+                <Header />
+                <main>
+                  {children}
+                </main>
+              </div>
+              <Footer />
             </div>
-            <Footer />
-          </div>
-        </ThemeProvider>
+          </ThemeProvider>
+        </NextAuthStore>
       </body>
     </html>
   );
