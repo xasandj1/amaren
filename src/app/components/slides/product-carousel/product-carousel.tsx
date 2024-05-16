@@ -42,7 +42,7 @@ export const ProductCarousel = async () => {
                                         <span className='line-through text-[#A4A4A4] font-normal text-sm'>$45.00</span>
                                     </div>
                                     <div className="flex flex-col">
-                                        <div className="text-[#444] text-sm font-normal max-w-[350px] w-full" dangerouslySetInnerHTML={{ __html: product.other_detail.slice(0, 100) }} ></div>
+                                        <div className="text-[#444] text-sm font-normal max-w-[350px] w-full" >{product.other_detail.slice(3, 100)}</div>
                                     </div>
                                     <h3 className="text-black font-bold text-lg mt-4">Hurry up! Special offer:</h3>
                                 </div>

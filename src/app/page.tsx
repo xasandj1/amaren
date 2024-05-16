@@ -70,8 +70,8 @@ const Home = async ({ index }: { index: number }) => {
           <RecentProduct />
         </div>
       </section>
-      <button className="fixed bg-primaryYellow p-5 rounded-[50%] right-[10px] bottom-[5px] z-50">
-        <CiDesktopMouse2 fontSize={20} fontWeight={700}/>
+      <button className="fixed bg-primaryYellow p-5 rounded-[50%] right-[10px] bottom-[5px] z-50 text-base">
+        <CiDesktopMouse2 className="text-base text-black font-bold"/>
       </button>
     </>
   );

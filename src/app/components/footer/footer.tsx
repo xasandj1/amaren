@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const Footer = () => {
     return (
-        <div className='xs:pb-[60px] sm:pb-[60px] md:pb-[60px] ml:pb-0'>
+        <div className='xs:pb-[60px] sm:pb-[60px] md:pb-[60px] ml:pb-0 relative'>
             <div className='bg-[#394150] pt-[70px] pb-[50px]'>
                 <div className="container">
                     <div className='flex flex-wrap xs:gap-7 sm:gap-[40px] items-start justify-between'>
