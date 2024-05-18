@@ -1,12 +1,12 @@
 "use client"
 import React from 'react'
-import ProfileBanner from "../../../assets/images/ProfilImg.jpg"
+import ProfileBanner from "../../../assets/images/ProfilImg.png"
 import Link from 'next/link'
 import { signIn, signOut, useSession } from 'next-auth/react'
 
 export const ProfilePage = () => {
-    // const session = useSession()
-    // console.log(session);
+    const session = useSession()
+    console.log(session);
 
 
     const sigOut = () => {

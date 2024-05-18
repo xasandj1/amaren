@@ -27,7 +27,7 @@ const Home = async ({ index }: { index: number }) => {
           </div>
         </div>
       </section>
-      <section className="bg-[#F5F6F9] dark:bg-[#202020e4] pb-8 pt-5">
+      <section className="mt-[30px]">
         <div className="container">
           <div className="bg-white dark:bg-[#141414] rounded-md py-[30px] flex flex-col gap-10 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 px-[10px]">
             {

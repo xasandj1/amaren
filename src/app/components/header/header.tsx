@@ -40,7 +40,7 @@ export const Header = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href={'/shop'}>
+                                <Link href={'/shop/2175'}>
                                     Shop
                                 </Link>
                             </li>
@@ -92,7 +92,7 @@ export const Header = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className='flex relative gap-1 flex-col items-center text-[14px] text-[#666] dark:text-[#ffffffd8]' href="/profile">
+                                    <Link className='flex relative gap-1 flex-col items-center text-[14px] text-[#666] dark:text-[#ffffffd8]' href="/shop">
                                         <BiShoppingBag size={33} />
                                         My Cart
                                         <Badge className='bg-[#FCB700] absolute top-[50%] translate-y-[-55%] right-[-10px] w-[25px] h-[25px] flex items-center justify-center rounded-full' variant="outline">0</Badge>

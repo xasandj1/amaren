@@ -23,31 +23,31 @@ export const menuData = [
         links: [
             {
                 name: "Shop Layout",
-                link: "/shop"
+                link: "/shop/2175"
             },
             {
                 name: "Masonry Grid",
-                link: "/shop"
+                link: "/shop/2175"
             },
             {
                 name: "Pagination",
-                link: "/shop"
+                link: "/shop/2175"
             },
             {
                 name: "Ajax Load More",
-                link: "/shop"
+                link: "/shop/2175"
             },
             {
                 name: "Infinite Scroll",
-                link: "/shop"
+                link: "/shop/2175"
             },
             {
                 name: "Sidebar Right",
-                link: "/shop"
+                link: "/shop/2175"
             },
             {
                 name: "Sidebar Left",
-                link: "/shop"
+                link: "/shop/2175"
             }
 
         ]

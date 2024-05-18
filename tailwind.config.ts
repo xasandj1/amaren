@@ -25,7 +25,7 @@ const config = {
         center: true,
         padding: "20px",
         screens: {
-          xl: "1440px",
+          xl: "1560px",
         },
       },
       colors: {

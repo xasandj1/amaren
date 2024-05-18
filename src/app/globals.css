@@ -1,14 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-}
 
 body {
-  margin: 0;
-  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Rubik", sans-serif !important;
+  background: #F5F6F9;
 }
 
 
@@ -52,7 +51,6 @@ body {
 
 .slick-active button {
   background-color: #ffffff !important;
-  ;
 }
 
 .slick-next {
@@ -66,7 +64,7 @@ body {
 .slick-next::after {
   content: "";
   font-size: 50px;
-  background-image: url("../app/assets/icons/rigth-arrow.svg");
+  background-image: url("../app/assets/icons/left-arrow.svg") !important;
   height: 30px;
   width: 30px;
   background-position: center;
@@ -89,6 +87,13 @@ body {
   background-color: #ffffff;
   border-radius: 50%;
   display: inline-block;
+}
+
+@layer components {
+  .loader {
+    @apply animate-spin;
+    border-top-color: #3490dc;
+  }
 }
 
 
