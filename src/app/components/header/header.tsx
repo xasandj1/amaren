@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import logo from '@/app/assets/images/logo.png'
-import { BiHeart, BiMenu, BiShoppingBag, BiSupport, BiUser } from "react-icons/bi";
+import { BiMenu, BiSupport } from "react-icons/bi";
 import {
     Drawer,
     DrawerContent,
@@ -20,6 +20,8 @@ import { Searchbox } from './components/searchbox/searchbox';
 import { Badge } from '@/components/ui/badge';
 import { HeaderMenubar } from './components/menubar/menubar';
 import { ModeToggle } from '@/components/mode-toggle';
+import { HeaderLinks } from './components/header-links/header-links';
+
 
 export const Header = () => {
     return (
@@ -77,28 +79,7 @@ export const Header = () => {
                             <Searchbox />
                         </div>
                         <div className='xs:hidden hidden sm:hidden md:hidden ml:block'>
-                            <ul className='flex items-center gap-7'>
-                                <li>
-                                    <Link className='flex relative gap-1 flex-col items-center text-[14px] text-[#666] dark:text-[#ffffffd8]' href="/profile">
-                                        <BiUser size={33} />
-                                        Profile
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className='flex relative gap-1 flex-col items-center text-[14px] text-[#666] dark:text-[#ffffffd8]' href="/wishlist">
-                                        <BiHeart size={33} />
-                                        Favorites
-                                        <Badge className='bg-[#FCB700] absolute top-[50%] translate-y-[-55%] right-[-10px] w-[25px] h-[25px] flex items-center justify-center rounded-full' variant="outline">0</Badge>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className='flex relative gap-1 flex-col items-center text-[14px] text-[#666] dark:text-[#ffffffd8]' href="/shop">
-                                        <BiShoppingBag size={33} />
-                                        My Cart
-                                        <Badge className='bg-[#FCB700] absolute top-[50%] translate-y-[-55%] right-[-10px] w-[25px] h-[25px] flex items-center justify-center rounded-full' variant="outline">0</Badge>
-                                    </Link>
-                                </li>
-                            </ul>
+                            <HeaderLinks />
                         </div>
                         <div className='ml:hidden'>
                             <Drawer direction='left'>

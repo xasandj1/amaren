@@ -4,8 +4,6 @@ import { BreadcrumbDemo } from '@/app/components/brandcamp/BrandCamp';
 import { AccordionMenu } from '@/app/components/accardonMenu/accardonMenu';
 import { Slider } from "@/components/ui/slider"
 import { ChangesCard } from '../components/ChangesCard';
-import Link from 'next/link';
-import { MdOutlineStarBorder } from "react-icons/md";
 import { ProductShop } from '../components/ProductCards/ProductCards';
 
 const SubId: NextPage<{ params: { categoryId: number } }> = async ({ params }) => {

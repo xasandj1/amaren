@@ -12,8 +12,6 @@ const like = createSlice({
     initialState,
     reducers: {
         addLikeItem: (state, action) => {
-            console.log({ ...action.payload });
-
             const idf = state.likeItem.find((item: any) => item.id === action.payload.id);
             if (!idf) {
                 return { ...state, likeItem: [...state.likeItem, { ...action.payload }] }

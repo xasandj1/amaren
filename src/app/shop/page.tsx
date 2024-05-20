@@ -15,7 +15,7 @@ interface ProductImage {
 interface Product {
     attribute_value: number;
     id: number;
-    images: ProductImage[];
+    images: ProductImage[] | null;
     is_available: boolean;
     other_detail: string;
     price: string;
@@ -27,12 +27,12 @@ interface Product {
     userPrice: number;
 }
 
-interface ProductState {
+export interface ProductState {
     products: Product[];
     totalPrice: number;
 }
 
-interface ReduxState {
+export interface ReduxState {
     product: ProductState;
 }
 
@@ -76,7 +76,6 @@ const Shop: React.FC = () => {
     if (loading) {
         return <Loading />;
     }
-
     return (
         <section className="my-3">
             <div className="container bg-white p-3 border flex gap-3 xs:flex-col xxl:flex-row">
@@ -85,7 +84,7 @@ const Shop: React.FC = () => {
                     <div className="mt-3 ">
                         {!products ? <Loading /> : products.map((product: Product) => (
                             <div key={product.id} className='flex items-center mb-3 border border-primaryYellow justify-between p-4 xs:flex-col md:flex-row'>
-                                <img src={product.images[0].image} alt="" className='max-w-24 w-full' />
+                                <img src={product.images![0].image} alt="" className='w-24 h-24'/>
                                 <div className="ml-5 xs:flex xs:flex-col xs:items-center md:flex-col md:items-start xs:ml-0 md:ml-5">
                                     <h3 className='text-xl font-medium text-black capitalize'>{product.title}</h3>
                                     <div className="flex items-center mt-2 gap-2">
