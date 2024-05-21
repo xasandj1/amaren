@@ -9,7 +9,7 @@ export const BannerCard = async () => {
             <Banner>
                 {
                     banners.results.map((banner, index) => (
-                        <div key={index} className={`w-full`} >
+                        <div key={banner.id} className={`w-full`} >
                             <img src={banner.image} className="w-full min-h-[300px] xs:min-h-[300px] sm:h-[500px] ml:h-[600px] object-cover bg-center" alt="" />
                             <div className="absolute w-full z-100 top-0 ml:p-10 xs:p-0" >
                                 <h1 className="text-white text-[30px] ]" >{banner.title}</h1>

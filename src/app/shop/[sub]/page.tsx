@@ -7,6 +7,7 @@ import { ChangesCard } from '../components/ChangesCard';
 import { ProductShop } from '../components/ProductCards/ProductCards';
 
 const SubId: NextPage<{ params: { categoryId: number } }> = async ({ params }) => {
+    
     return (
         <section className="my-5 ">
             <div className="container flex justify-between">
@@ -24,7 +25,7 @@ const SubId: NextPage<{ params: { categoryId: number } }> = async ({ params }) =
                         </div>
                     </div>
                 </div>
-                <div className="max-w-[1050px] w-full">
+                <div className="max-w-[1100px] w-full">
                     <ChangesCard />
                     <ProductShop params={{ categoryId: params.categoryId }} key={params.categoryId} />
                 </div>

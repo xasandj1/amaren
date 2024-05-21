@@ -7,13 +7,13 @@ import { useDispatch } from 'react-redux'
 import { addLikeItem, likeReducer } from '@/redux/reducer/like'
 import { add } from '@/redux/reducer/cart'
 
-export const VarinatCard: React.FC<ProductType> = (data) => {
+export const VarinatCard: React.FC<ProductType> = (data, { params }) => {
     const addShop = useDispatch()
     const addLike = useDispatch()
 
     return (
-        <div className="flex items-center flex-col transform transition-all hover:scale-110 hover:shadow-xl p-3">
-            <Link href={"#"} className="flex items-center flex-col">
+        <div className="flex items-center flex-col transform transition-all hover:scale-110 hover:shadow-xl p-3 max-w-[262px] w-full hover:bg-white">
+            <Link href={`/product/${data.product}/`} className="flex items-center flex-col">
                 <img src={data.images[0].image} alt="" className='max-w-[150px] h-[200px] w-full object-contain' />
                 <h1 className='text-[10px] text-[#999] font-normal mt-2'>{data.title}</h1>
                 <p className="text-[12px] font-bold text-[#999] mt-1">quantity:{data.quantity}</p>

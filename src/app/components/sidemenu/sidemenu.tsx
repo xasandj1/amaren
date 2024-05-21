@@ -18,7 +18,7 @@ export const SideMenu = async () => {
                         <AccordionTrigger className="text-start">{category.title}</AccordionTrigger>
                         <AccordionContent className="flex flex-col gap-3">
                             {category.children.map((child, index) => (
-                                <Link key={index} className="border-t border-[#E7E2E2] hover:text-[#FCB700] py-1" href={`/shop/${child.id}`}>
+                                <Link key={child.id} className="border-t border-[#E7E2E2] hover:text-[#FCB700] py-1" href={`/shop/${child.id}`}>
                                     {child.title}
                                 </Link>
                             ))}

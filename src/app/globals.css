@@ -64,7 +64,7 @@ body {
 .slick-next::after {
   content: "";
   font-size: 50px;
-  background-image: url("../app/assets/icons/left-arrow.svg") !important;
+  background-image: url("../app/assets/icons/rigthArrow.svg") !important;
   height: 30px;
   width: 30px;
   background-position: center;
@@ -78,7 +78,7 @@ body {
 .slick-prev::after {
   content: "";
   font-size: 50px;
-  background-image: url("../app/assets/icons/left-arrow.svg");
+  background-image: url("../app/assets/icons/leftArrow.svg");
   height: 30px;
   width: 30px;
   background-position: center;

@@ -9,16 +9,13 @@ export const HeaderLinks = () => {
     const [isMounted, setIsMounted] = useState(false);
     const { count, likes } = useSelector((state: any) => state.product);
     const { likeCount } = useSelector((state: any) => state.like);
-    console.log(likeCount);
-        
-    
 
     useEffect(() => {
         setIsMounted(true);
     }, []);
 
     if (!isMounted) {
-        return null; // or return a placeholder if necessary
+        return null; 
     }
 
     return (
