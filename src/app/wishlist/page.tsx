@@ -36,9 +36,6 @@ export interface ProductState {
 const Wishlist: NextPage = (data) => {
   const dispatch = useDispatch();
   const { likeItem } = useSelector((state: any) => state.like);
-  const addShop = useDispatch()
-
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -61,14 +58,6 @@ const Wishlist: NextPage = (data) => {
   if (loading) {
     return <Loading />;
   }
-  const handleBuyNow = () => {
-    try {
-      const processedData = add(data);
-      addShop(processedData);
-    } catch (error) {
-      console.error("Error in handleBuyNow:", error);
-    }
-  };
   return (
     <section className="my-3">
       <div className="container bg-white p-3 border flex gap-3 xs:flex-col xxl:flex-row">

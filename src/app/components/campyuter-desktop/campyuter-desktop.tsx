@@ -1,5 +1,4 @@
 import React from 'react'
-import Deskotip from '@/app/assets/images/desktop.png'
 import { Desktop } from './components/desktop'
 
 export const CampyuterDesktop = () => {

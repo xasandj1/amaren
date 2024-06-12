@@ -18,7 +18,6 @@ export const ScollButton = () => {
       <Link href="#" scroll={false} passHref>
         <Button
           className="rounded-lg bg-[#ffffff87]"
-          variant="link"
           onClick={scrollToTop}
         >
           <MdKeyboardDoubleArrowUp size={25} />

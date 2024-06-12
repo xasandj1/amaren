@@ -6,8 +6,8 @@ import { Slider } from "@/components/ui/slider"
 import { ChangesCard } from '../components/ChangesCard';
 import { ProductShop } from '../components/ProductCards/ProductCards';
 
-const SubId: NextPage<{ params: { categoryId: number } }> = async ({ params }) => {
-    
+const SubId: NextPage<{ params: { categoryId: number  } }> = async ({ params }) => {
+
     return (
         <section className="my-5 ">
             <div className="container flex justify-between">
